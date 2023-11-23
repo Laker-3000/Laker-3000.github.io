@@ -4,28 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    
     <style>
         body {
-            max-width: 600px; /* Пример фиксированной ширины */
-            margin: 0 auto; /* Центрирование содержимого */
+            margin: 0;
+            background-color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100vh;
+        }
 
+        .content {
+            border: 2px solid #ffffff;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(255, 255, 255, 0.13);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            width: 100%;
+            padding: 50px 35px;
         }
     </style>
-    
 </head>
-<body style=" padding: 0;">
-    
-    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100vh;">
-        <div style="border: 2px solid #ff0000; padding: 20px;">   
-                   
-          
-            {%block main%}
-            {%endblock%}
+<body>
+    <div class="container">
+        <div class="content">   
+            {% block main %}
+            {% endblock %}
         </div>
     </div>
-
 </body>
 </html>
